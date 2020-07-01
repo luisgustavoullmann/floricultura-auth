@@ -13,18 +13,11 @@ import java.security.Principal;
 @SpringBootApplication
 @EnableAuthorizationServer
 @EnableResourceServer
-@RestController
 public class AuthApplication {
     //Autenticação do repositório de REST-API é melhor explicado
 
     public static void main(String[] args) {
         SpringApplication.run(AuthApplication.class, args);
-    }
-
-    //Principal é justamente os dados do usuário
-    @GetMapping("/user")
-    public Principal user(Principal user){
-        return user;
     }
 
 }
